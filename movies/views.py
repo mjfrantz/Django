@@ -11,6 +11,9 @@ def index(request):
     #send data and render html
     return render(request, 'views/index.html', { 'title' : 'Index Page', 'items': genres })
 
+def catalog(request):
+    return render(request, 'views/catalog.html')
+
 def welcome(request):
     return render(request, 'views/welcome.html', { 'title' : 'Welcome', 'rows' : 2})
 
