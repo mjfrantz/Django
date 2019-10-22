@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#where to upload the images to: 
+MEDIA_URL = '/media/'
+
+#how to find the images from html
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Genre, Movie, Series
 
+
 # Register your models here.
 
 #Create classes to customize how admin displays models

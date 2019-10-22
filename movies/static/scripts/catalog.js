@@ -41,7 +41,7 @@ function displayMovie(movie){
 
     var container = $(".cat-container");
 
-    var li = `<li>${movie.title}</li>`;
+    var li = `<li><img src="${movie.image}">${movie.title}</li>`;
     container.append(li);
 };
 

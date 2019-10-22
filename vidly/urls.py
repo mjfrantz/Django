@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include 
 from api.models import MovieResource, GenreResource
+from django.conf import settings
+from django.conf.urls.static import static
 
 movie_resource = MovieResource()
 genre_resource = GenreResource()
@@ -26,3 +28,6 @@ urlpatterns = [
     path('api/', include(movie_resource.urls)),
     path('api/',include(genre_resource.urls))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
