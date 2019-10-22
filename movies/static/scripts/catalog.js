@@ -14,6 +14,28 @@ function getData(){
     });
 }
 
+//Added after
+
+function postCODE(){
+
+    var newG = {
+        name: 'This is a new one'
+    }
+    $.ajax({
+        url:'/api/genres',
+        type:'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(newG),
+        success:function(res){
+            console.log(res);
+        },
+        error:function(details){
+            console.log("Error on get req", details)
+        }
+    });
+}
+
+
 function displayMovie(movie){
     console.log(movie);
 
